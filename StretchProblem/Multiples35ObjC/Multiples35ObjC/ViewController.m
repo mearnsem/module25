@@ -16,12 +16,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self fizzBuzz:100];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)fizzBuzz:(int)num  {
+    
+    
+    for(int a = 1; a <= num; a +=1) {
+        
+        if (a % 3 == 0 && a % 5 == 0) {
+            NSLog(@"fizzBuzz");
+        } else if (a % 3 == 0) {
+            NSLog(@"fizz");
+        } else if (a % 5 == 0) {
+            NSLog(@"buzz");
+        } else {
+            NSLog(@"%d", a);
+        }
+        
+        
+    }
+    
+    
 }
+
+
+
 
 @end
